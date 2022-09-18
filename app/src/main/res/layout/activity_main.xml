@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/imageBack"
+        android:layout_width="521dp"
+        android:layout_height="793dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/back" />
+
+    <EditText
+        android:id="@+id/textNumberConsumoLitros"
+        android:layout_width="73dp"
+        android:layout_height="52dp"
+        android:background="@android:drawable/editbox_background"
+        android:ems="10"
+        android:hint="Km/l"
+        android:inputType="number|numberDecimal"
+        android:textAlignment="center"
+        app:layout_constraintStart_toEndOf="@+id/textConsumo"
+        app:layout_constraintTop_toTopOf="@+id/textConsumo"
+        android:imeOptions="actionSend" />
+
+    <EditText
+        android:id="@+id/textNumberValorGasolina"
+        android:layout_width="64dp"
+        android:layout_height="50dp"
+        android:background="@android:drawable/editbox_background"
+        android:ems="10"
+        android:hint="Valor"
+        android:inputType="number|numberDecimal"
+        android:textAlignment="center"
+        app:layout_constraintStart_toEndOf="@+id/textValorGasolina"
+        app:layout_constraintTop_toTopOf="@+id/textValorGasolina"
+        android:imeOptions="actionSend" />
+
+    <EditText
+        android:id="@+id/textNumberKm"
+        android:layout_width="64dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="60dp"
+        android:background="@android:drawable/editbox_background"
+        android:ems="10"
+        android:hint="Km"
+        android:inputType="number|numberDecimal"
+        android:textAlignment="center"
+        app:layout_constraintStart_toEndOf="@+id/textDistancia"
+        app:layout_constraintTop_toBottomOf="@+id/textTitle"
+        android:imeOptions="actionSend" />
+
+    <TextView
+        android:id="@+id/textTitle"
+        android:layout_width="398dp"
+        android:layout_height="57dp"
+        android:background="@android:drawable/editbox_background"
+        android:fontFamily="sans-serif"
+        android:text="Calculadora de Gasolina"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.024" />
+
+    <TextView
+        android:id="@+id/textDistancia"
+        android:layout_width="248dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="60dp"
+        android:background="@android:drawable/editbox_background"
+        android:contentDescription="Insira a distância em km"
+        android:fontFamily="sans-serif-black"
+        android:paddingLeft="8dp"
+        android:text="Distância de viagem:"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textTitle" />
+
+    <TextView
+        android:id="@+id/textValorGasolina"
+        android:layout_width="275dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="20dp"
+        android:background="@android:drawable/editbox_background"
+        android:fontFamily="sans-serif-black"
+        android:paddingLeft="8dp"
+        android:text="Valor atual da gasolina:"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textConsumo" />
+
+    <TextView
+        android:id="@+id/textConsumo"
+        android:layout_width="306dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="16dp"
+        android:background="@android:drawable/editbox_background"
+        android:fontFamily="sans-serif-black"
+        android:paddingLeft="8dp"
+        android:text="Consumo do veículo/litro:"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textDistancia" />
+
+    <TextView
+        android:id="@+id/textResultado"
+        android:layout_width="151dp"
+        android:layout_height="43dp"
+        android:layout_marginStart="140dp"
+        android:layout_marginTop="80dp"
+        android:background="@android:drawable/editbox_background"
+        android:fontFamily="sans-serif-black"
+        android:text="Resultado"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textValorGasolina" />
+
+    <TextView
+        android:id="@+id/textViewResultado"
+        android:layout_width="111dp"
+        android:layout_height="53dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="4dp"
+        android:background="@android:drawable/editbox_background"
+        android:paddingTop="10dp"
+        android:text="Resultado"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        android:visibility="visible"
+        app:layout_constraintStart_toStartOf="@+id/textResultado"
+        app:layout_constraintTop_toBottomOf="@+id/textResultado" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
